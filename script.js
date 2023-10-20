@@ -28,32 +28,30 @@ function game(){
   let playScore = 0;
   let computerScore = 0;
 
-  for(let i=0;i<100;){
+  for(let i=0;i<100;i++){
     
-    let playerChoice = prompt("what your choice?");
+    let playerChoice = prompt("What's your choice?");
     let computerChoice = getComputerChoice();
 
     console.log("player choice: " + playerChoice + " vs " + "computer choice " + computerChoice);
 
 
     let num = playRound(playerChoice,computerChoice);
+    
     if(playScore <5 && computerScore<5){
       if (num===1){
         playScore++;
-        i++;
       }else if(num===2){
         computerScore++;
-        i++;
       }else{
         console.log("Draw!")
-        i++;
       }
     }else if(playScore===5){
       console.log("you big win");
       break;
     }
     else{
-      console.log("your loser");
+      console.log("Computer wins!");
       break;
     }
     console.log("your score: " + playScore);
