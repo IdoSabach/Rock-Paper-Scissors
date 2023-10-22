@@ -143,5 +143,15 @@ body{
   .result{
     font-size: 24px;
 }
+
+.btn-restart {
+  padding: 10px 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border-style: solid;
+  background-color: white;
+  color: black;
+}
 }
 
