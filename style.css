@@ -1,0 +1,147 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Playpen Sans', cursive;
+}
+
+body{
+  background-color: #748cab;
+}
+
+.all-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  text-align: center;
+  font-size: 48px;
+  background-color: #3e5c76;
+  width: 100%;
+  padding: 25px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.head{
+  font-size: 40px;
+  text-align: center;
+  padding: 25px;
+}
+
+.result{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.block-for-image-player,.block-for-image-computer{
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  border-style: solid;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.choice-rock,.choice-paper,.choice-scissors{
+  font-size: 120px;
+  /* margin: 10px; */
+  border-radius: 20px;
+  background: none;
+  border-style: none;
+  transition: 1s;
+}
+
+.choice-rock:hover,.choice-paper:hover,.choice-scissors:hover{
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+  user-select: none;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.btn-restart {
+  padding: 10px 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3e5c76;
+  opacity: 0.6;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+}
+
+@media(max-width:600px){
+  .title{
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .choice-rock,.choice-paper,.choice-scissors{
+    font-size: 68px;
+    margin: 10px;
+  }
+  .head{
+    font-size: 32px;
+  }
+
+  .result{
+    font-size: 24px;
+}
+}
+

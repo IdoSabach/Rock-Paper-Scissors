@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="script.js"></script>
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="all-page">
+      <div class="title">ROCK PAPER SCISSORS</div>
+
+      <div class="text-of-gmae">
+        <p class="head">Choose your weapon</p>
+        <!-- <p class="sub-head">First to score 5 points wins the game</p> -->
+      </div>
+
+      <div class="result">
+        <div class="your-choice">
+          <div class="block-for-image-player">?</div>
+          <div class="player-score">Player : 0</div>
+        </div>
+        <div class="computer-choice">
+          <div class="block-for-image-computer">?</div>
+          <div class="computer-score">computer : 0</div>
+        </div>
+      </div>
+
+      <div class="block-for-button">
+        <button class="choice-rock">✊</button>
+        <button class="choice-paper">🖐</button>
+        <button class="choice-scissors">✌️</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Ido Sabach
+      </p>
+      <a href="https://github.com/michalosman" target="_blank">
+        <i class="fab fa-github"></i
+      ></a>
+    </footer>
+
+    <div class="modal" id="endgameModal">
+      <p class="modal-title" id="endgameMsg"></p>
+      <button class="btn btn-restart" id="restartBtn">Play again</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </body>
 </html>
